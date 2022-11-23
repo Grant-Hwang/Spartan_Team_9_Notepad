@@ -119,8 +119,11 @@ public class MemoList {
     }
 
     public void getList() {                           //작성 최신 순으로 메모를 출력한다.
-        for (int i = (int)arr.size()-1; i>=0; i--) {
-            System.out.println(arr.get(i)+"\n");
+        if (arr.size()==0) System.out.println("표시 가능한 메모가 없습니다.");
+        else {
+            for (int i = arr.size() - 1; i >= 0; i--) {
+                System.out.println(arr.get(i) + "\n");
+            }
         }
     }
 }
