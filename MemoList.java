@@ -99,7 +99,7 @@ public class MemoList {
         }
 
         if (check == 0) {
-            System.out.println("수정할 메모가 존재하지 않습니다.");
+            System.out.println("삭제할 메모가 존재하지 않습니다.");
         }
     }
     
