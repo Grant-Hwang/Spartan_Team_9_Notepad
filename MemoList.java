@@ -30,16 +30,19 @@ public class MemoList {
         Scanner indexInput = new Scanner(System.in);
         int index = indexInput.nextInt();
         int check = 0;
+        
         if (this.arr.get(index).getText() != null) {
             System.out.println("index (" + index + ") 의 비밀번호를 입력하세요");
             Scanner passwordInput = new Scanner(System.in);
             String password = passwordInput.nextLine();
             check += 1;
+            
             if (password.equals(this.arr.get(index).getPassword())) {
                 System.out.println("메모내용 : " + this.idxGetText(index));
                 System.out.println("수정할 내용을 입력하세요.");
                 Scanner editMemoInput = new Scanner(System.in);
                 String editedMemo = editMemoInput.nextLine();
+                
                 this.arr.get(index).setText(editedMemo);
                 this.arr.get(index).setDate(formatedNow);
             } else if (password != this.arr.get(index).getPassword()) {
