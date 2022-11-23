@@ -6,6 +6,7 @@ public class Notepad {
 
         int choice;
         boolean flag = false;
+        MemoList memolist = new MemoList();
 
         System.out.println("=====================");
         System.out.println("ㅐ***9조대***메모장***ㅐ");
@@ -20,16 +21,16 @@ public class Notepad {
 
             switch (choice) {
                 case 1:
-                    memoAdd();
+                    memolist.memoAdd();
                     break;
                 case 2:
-                    memoList();
+                    memolist.getList();
                     break;
                 case 3:
-                    memoEdit();
+                    memolist.memoEdit();;
                     break;
                 case 4:
-                    memoDel();
+                    memolist.memoDel();
                     break;
                 case 5:
                     System.out.println("사용 종료");
